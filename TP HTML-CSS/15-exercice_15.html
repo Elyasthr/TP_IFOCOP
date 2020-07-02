@@ -1,0 +1,39 @@
+<!--
+Quand une balise ou une class se retrouve plusieurs fois dans la page, il est possible de cibler seulement certaines balises ou class en indiquant une partie ou la totalité du chemin pour l'atteindre.
+Par exemple,
+
+p code{
+	color: blue;
+}
+
+p .maBalise{
+	background-color: green;
+}
+-->
+
+<!--
+	1 - Créez un document contenant trois paragraphes. Associez une class seulement au premier.
+	2 - Intégrez une citation dans chaque paragraphe (<cite>)
+	3 - Donnez une couleur différente uniquement à la citation dans le paragraphe avec une class.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="15-exercice_15.css">
+	<title>Exercice 15</title>
+	<style>
+		.para cite{
+			color: blueviolet;
+		}
+	</style>
+</head>
+<body>
+	<p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci soluta quisquam obcaecati eveniet beatae unde cupiditate necessitatibus. Odit est, deleniti impedit sit, excepturi, facere possimus et animi ut laboriosam veniam cum! Esse in perferendis voluptate sit explicabo voluptatem provident quibusdam, repudiandae velit cum facere animi est, <cite> voluptatum laborum deserunt eum aliquam! Obcaecati minima ducimus officiis</cite>, beatae reprehenderit deleniti officia ab atque, repellat, sit corporis cupiditate nesciunt aut vitae qui ad quidem explicabo aliquid veritatis rem debitis. Doloremque accusantium omnis illo molestiae, quos accusamus repudiandae ipsam, officia autem molestias aspernatur magni. Veritatis totam nisi exercitationem eius temporibus aliquid aut enim.</p>
+
+	<p><cite>ipsum dolor sit amet consectetur adipisicing elit. Sed pariatur soluta aspernatur quaerat! Nulla debitis dignissimos facilis nihil?</cite> Iste maiores quas rerum quia vero natus explicabo, ex sunt quo quis rem ut dolore a saepe tempore veniam deleniti harum incidunt, ad maxime doloribus eum! Laudantium ipsam odio id suscipit nisi iusto minus veritatis ipsa blanditiis sint pariatur ea tenetur ullam perspiciatis architecto quis magnam nulla fugit accusamus quidem, maiores incidunt in cumque! Esse minima, quo explicabo est culpa sunt praesentium? Mollitia, velit possimus itaque tempora sequi hic, necessitatibus, unde cum iusto doloremque sapiente quae vitae. Sint nostrum sequi illo eos?</p>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam possimus, adipisci nisi ad quo rerum impedit nostrum enim officiis natus nobis, cum nemo ut, suscipit qui assumenda laboriosam placeat magni expedita! Veniam, eaque minus molestiae maiores officiis, repellat optio odit velit praesentium eum, molestias voluptates ipsam tempore aliquid. Ut maiores aut ab iusto eos obcaecati delectus tempore voluptatum, harum eius perspiciatis odio fugit repudiandae quibusdam vel vero neque natus iure alias. <cite>saepe facilis porro mollitia fugiat vero,</cite> voluptatem nobis at sapiente libero corporis, adipisci incidunt culpa! Tenetur obcaecati blanditiis temporibus nobis consequuntur officiis est perferendis harum distinctio. Quos, fuga!</p>
+	
+</body>
+</html>

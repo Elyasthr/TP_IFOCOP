@@ -1,0 +1,57 @@
+<!--
+Par défaut, les coins d'un bloc sont carrés. Un arrondi sur les bordures est appliqué avec la propriétée border-radius
+
+div{
+	border-radius: 5px 6px 4px 18px;
+}
+
+Pour appliquer le même arrondi sur les quatre coins :
+
+h2{
+	border-radius: 6px;
+}
+-->
+
+<!--
+	1 - Créez un document avec un h1 et un paragraphe et une div vide.
+	2 - Mettez une bordure sur chaque balise.
+	3 - Réalisez un arrondi de quelques px sur le h1 identique sur les quatre côtés.
+	4 - Sur le paragraphe, mettez un arrondi différent sur les coins-haut gauche et bas-droit d'une part et bas-gauche et haut-droit d'autre part.
+	5 - Donnez à la div une couleur de fond, une largeur et une hauteur identique et un border-radius de même dimension que la dimension d'un côté de la div.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 32</title>
+	<style>
+		h1{
+			border: 3px solid red;
+			border-radius: 2px;
+		}
+		p{
+			border: 3px solid green;
+			border-top-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-top-left-radius: 2px;
+			border-bottom-right-radius: 2px;
+		}
+		div{
+			border: 3px solid blue;
+			background-color: black;
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Titre</h1>
+	
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, cum. Cupiditate itaque saepe nostrum nemo vitae sit maxime hic voluptas, ipsum aliquid iusto laudantium temporibus fugit pariatur minus officiis? Magnam sunt qui labore alias voluptas expedita ratione. Nihil deleniti perspiciatis, animi et delectus vitae dolores commodi facilis, sunt nulla recusandae.</p>
+
+	<div></div>
+</body>
+</html>

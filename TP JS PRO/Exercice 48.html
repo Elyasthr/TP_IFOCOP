@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>JavaScript : Exercice 48</title>
+		<script type="text/javascript">
+			/*********************************
+			*************EXERCICE*************
+			**********************************
+				Faire une fonction qui prend en argument un tableau contenant des valeurs numériques, et qui trie ce tableau par ordre croissant.
+				Cette fonction devra pouvoir accepter un tableau de n’importe quelle taille.
+
+				Rappel : les tableaux sont vraiment modifiés par les fonctions.
+
+				Note : cette fonction existe déjà en JavaScript, elle s’appelle sort(), mais le but est de la refaire.
+
+				Exemple :
+				tableau de départ [5 , 8, 13, 2]
+				à l’arrivée doit donner [2, 5, 8, 13]
+
+				Indice : il faut utiliser 2 boucles imbriquées
+			*/
+			
+			function trie(tab){
+				var i = 0;
+				var a;
+				while(i<tab.length){
+					if(tab[i]>tab[i+1]){
+						a = tab[i];
+						tab[i] = tab[i+1];
+						tab[i+1] = a;
+						i = 0;
+					}
+					else{
+						i++;
+					}
+				}
+				return tab;
+			}
+
+			var tabinit = [25,64,1,35,9,124,23,1,69,35];//[123,54,0,5,8,13,2,123,1,3,7,3,12];
+			var tabfinal = trie(tabinit);
+			console.log(tabfinal);
+		</script>
+	</head>
+	<body>
+		<h1>Mon nouveau document</h1>
+		<p>Premier paragraphe</p>
+		<p>Deuxième paragraphe</p>
+		<noscript>
+			<p>Veuillez activer JavaScript</p>
+		</noscript>
+	</body>
+</html>

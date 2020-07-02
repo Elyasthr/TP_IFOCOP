@@ -1,0 +1,56 @@
+<!--
+Dans le fragment de page suivant,
+<h1>Un titre</h1>
+<p>Paragraphe 1</p>
+<p>Paragraphe 2</p>
+
+Quand on écrit, par exemple,
+
+h1 p {
+	color: yellow;
+}
+
+,tous les p auront la couleur du texte en jaune.
+Si on écrit,
+
+h1+p {
+	color: yellow;
+}
+
+seul le premier p sera en jaune.
+-->
+
+<!--
+	1 - Créez un document contenant un titre h1 suivi de deux h2.
+	2 - Chaque h2 précède deux p.
+	3 - Mettez le premier h2 dans une autre couleur.
+	4 - Mettez le premier p suivant le premier h2 dans une autre couleur.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 17</title>
+	<style>
+		h1+h2{
+			color :blue;
+		}
+
+		h1+h2+p{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Lorem ipsum dolor sit amet.</h1>
+
+	<h2>Lorem ipsum dolor sit amet.</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis obcaecati similique aspernatur, vero tempora?</p>
+
+	<h2>Lorem ipsum dolor sit amet.</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente, amet illum dicta molestiae pariatur!</p>
+
+</body>
+</html>

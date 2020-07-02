@@ -1,0 +1,60 @@
+<!--
+	La  propriété border peut être appliquée à des cellules d'un tableau.
+	Pour supprimer l'espace entre les bordures de cellules jointives, il faut utiliser la propriété : border-collapse.
+-->
+
+<!--
+	1 - Reprenez le tableau de l'exercice précédent
+	2 - Mettez une bordure large sur le contour extérieur du tableau.
+	3 - Mettez sur les autres bordures de cellule un tireté fin.
+	4 - Ajoutez un couleur de fond foncée sur la première ligne avec un texte en blanc.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 42</title>
+	<style>
+		table{
+			border: 3px solid black;
+		}
+		th, td{
+			border: 1px dashed black;
+		}
+		th{
+			background-color: gray;
+			color: aliceblue;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Ville</th>
+			<th>Département</th>
+			<th>Region</th>
+		</tr>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+	</table>
+</body>
+</html>

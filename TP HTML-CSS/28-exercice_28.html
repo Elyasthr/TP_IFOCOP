@@ -1,0 +1,43 @@
+<!--
+Au lieu de stocker des polices sur le serveur qui seront téléchargées par le poste client, on peut utiliser des polices proposées par un site tiers tel Google Fonts.
+-->
+
+<!--
+1 - Créez un document avec trois balises h1.
+2 - Choisissez trois polices sur Google Fonts (http://www.google.com/fonts/). Pour ce faire, cliquez sur Quick-use (deuxième bouton à gauche de Add to Collection).
+3 - Chaque balise h1 est suivie d'un paragraphe.
+4 - Appliquez un style différent à chaque balise.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 28</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Slab:wght@900&family=Roboto:ital,wght@0,300;1,100;1,700&display=swap');
+
+        h1{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        p{
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #t{
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titre</h1>
+    <p id="t">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum magni asperiores reprehenderit sed hic delectus corporis aspernatur nemo atque illo.</p>
+
+    <h1>Titre</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum magni asperiores reprehenderit sed hic delectus corporis aspernatur nemo atque illo.</p>
+
+    <h1>Titre</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum magni asperiores reprehenderit sed hic delectus corporis aspernatur nemo atque illo.</p>
+</body>
+</html>

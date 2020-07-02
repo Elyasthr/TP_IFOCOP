@@ -1,0 +1,47 @@
+<!--
+L'application de bordure sur les blocs se fait au moyen de la propriété border (version raccourcie) ou des propriétés border-width, border-style et border-color.
+Par exemple :
+h1{
+	border: 3px solid #87ff8d;
+}
+Il est possible d'appliquer une bordure à un seul côté. Dans ce cas, il faut utiliser les propriétés border-right-width, border-right-style et border-right-color (ici pour la bordure de droite).
+
+Vous trouverez l'ensemble des paramètres ici : https://developer.mozilla.org/fr/docs/Web/CSS/border.
+-->
+
+<!--
+	1 - Créez un document avec un h1 et deux paragraphes.
+	2 - Encadrez le premier paragraphe d'un trait continu coloré.
+	3 - Soulignez le h1 avec un tireté
+	4 - Donnez au second un effet de relief (pseudo-3d)
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 32</title>
+	<style>
+		h1+p{
+			border: 1px solid red;
+		}
+
+		h1
+		{
+			border-bottom: 1px dashed;
+		}
+
+		p{
+			border: 13px ridge green;
+		}
+	</style>
+</head>
+<body>
+	<h1>Titre</h1>
+	
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, cum. Cupiditate itaque saepe nostrum nemo vitae sit maxime hic voluptas, ipsum aliquid iusto laudantium temporibus fugit pariatur minus officiis? Magnam sunt qui labore alias voluptas expedita ratione. Nihil deleniti perspiciatis, animi et delectus vitae dolores commodi facilis, sunt nulla recusandae.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi cum eos nam non ut, atque, a ab veritatis optio magni dolorem exercitationem? Tempore rem accusamus quam ullam officiis. Maxime unde sequi esse facilis quos ipsum aliquid ex quod modi, nobis cum commodi optio exercitationem, aperiam nulla quibusdam adipisci vero enim?</p>
+	
+</body>
+</html>

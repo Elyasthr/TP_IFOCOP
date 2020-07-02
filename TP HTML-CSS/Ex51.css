@@ -1,0 +1,108 @@
+body{
+    background-color: #5187A3;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1{
+    font-size: 3.5rem;
+    font-style: italic;
+    color: #E3B47C;
+    background-color: #305A71;
+    text-align: center;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 0;
+
+}
+
+nav{
+    position: absolute;
+    left: 0;
+    top: 150px;
+    background-color: #305A71;
+    color: #E3B47C;
+    width: 66px;
+    height: 136px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #E3B47C;
+    padding-right: 50px;
+}
+
+hr{
+    border-color: #E3B47C;
+    width: 150px;
+}
+
+li{
+    list-style: none;
+    font-size: 1.25rem;
+    position: absolute;
+    
+}
+
+ul {
+    padding: 0px
+}
+
+
+main{
+    margin: 0 300px;
+    padding: 20px 10px 40px;
+    font-size: 0.90rem;
+    background-color: #F2DECA;
+    text-align: justify;
+    position: fixed;
+}
+
+.un{
+    top: 10px;
+    left: -122px;
+    width: 170px;
+}
+
+.un:hover{
+    left: 0;
+    background-color: #305A71;
+}
+
+.deux{
+    top: 40px;
+  left: -145px;
+  width: 190px;
+}
+
+.deux:hover{
+    left: 0;
+    background-color: #305A71;
+}
+
+.trois{
+    top: 70px;
+    left: -184px;
+    width: 230px;
+  }
+
+.trois:hover{
+    left: 0;
+    background-color: #305A71;
+}
+
+.quatre{
+    top: 100px;
+  left: -127px;
+  width: 170px;
+}
+
+.quatre:hover{
+    left: 0;
+    background-color: #305A71;
+}

@@ -1,0 +1,42 @@
+<!--
+Il est possible d'utiliser d'autres polices que celles présentes sur le poste client.
+Pour se faire, il est nécessaire de fournir la police au moyen de la règle CSS @font-face (voir https://developer.mozilla.org/fr/docs/Web/CSS/@font-face).
+Il est nécessaire d'utiliser plusieurs formats de police, tous les navigateurs ne supportant pas le même format de police (cf. tableau "Browser Support" http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp)
+Après cela, on utilise la police dans les balises souhaitées au moyen de la déclaration présentée dans l'exercice précédent.
+-->
+<!--
+1 - Créez un document.
+2 - Sur le site http://www.fontsquirrel.com/. Téléchargez deux polices :
+	A - Dans Font Filter, choisissez Webfont.
+	B - Choisisser une police.
+	C - Sur la fiche de la police, choisissez Webfont Kit.
+	D - Téléchargez en choisissant tous les formats.
+3 - Ajoutez bien les deux règles @font-face au début du CSS.
+4 - Créez deux paragraphes.
+5 - Appliquez une police différente à chaque paragraphe.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 27</title>
+	<style>
+
+@font-face{ 
+	font-family: '1942-webfont';
+	src: url('outils/1942-webfont.woff') format('woff')}
+
+		#test{
+			font-family: '1942-webfont';
+		}
+	</style>
+</head>
+<body>
+	<p id="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reprehenderit, expedita quisquam delectus alias deleniti minima praesentium modi ullam neque sunt! Nemo repudiandae, amet rem saepe velit architecto veritatis tempore impedit illum nihil dolore deserunt dolor libero ratione, officiis laborum corrupti minus labore culpa molestiae quo. Similique quisquam cumque quibusdam!</p>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum earum incidunt veniam perferendis voluptates beatae asperiores placeat ipsam enim! Expedita, illum veniam voluptatibus ducimus tempora blanditiis quisquam doloribus eligendi. Nesciunt officia dolor architecto optio animi suscipit, laboriosam vitae illum corrupti, excepturi totam incidunt aperiam dolorem molestiae quam eos quaerat eligendi?</p>
+
+	
+</body>
+</html>

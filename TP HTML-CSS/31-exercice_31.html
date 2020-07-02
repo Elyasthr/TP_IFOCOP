@@ -1,0 +1,40 @@
+<!--
+Par défaut, si vous redimensionnez un bloc; dans le cas où son contenu est plus grand que sa taille, ce contenu dépassera. Il est cependant possible de modifier ce comportement avec la propriété overflow.
+-->
+
+<!--
+	1 - Créez un document.
+	2 - Vous y insérez deux paragraphes contenants au-moins 1000 caractères chacun et n'ayant pas plus de 20 pixels de hauteur.
+	3 - Masquez, dans le premier paragraphe, le contenu qui dépasse.
+	4 - Faites défilez, dans le second paragraphe, le contenu au moyen d'un ascenseur (essayez successivement overflow-x et overflow-y)
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 31</title>
+	<style>
+		p{
+			height: 20px;
+		}
+
+		#p1{
+			overflow: hidden;
+		}
+
+		#p2{
+			overflow:scroll;
+			overflow-x: scroll;
+			overflow-y: scroll;
+		}
+
+	</style>
+</head>
+<body>
+	<p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure consequatur debitis sapiente, dignissimos voluptatum quos voluptates tenetur mollitia libero suscipit ipsam maiores! Nostrum at molestiae ab quae doloremque ratione natus illo ut, vitae saepe asperiores ipsum aperiam autem libero! Est molestias ducimus cupiditate autem harum natus cumque libero eum magnam quaerat. Magnam asperiores eveniet minus, nihil numquam necessitatibus minima! Quae amet voluptate reprehenderit. Doloremque dolor saepe molestiae impedit maiores? Nesciunt earum consectetur quis necessitatibus non, et enim excepturi ut? Et corrupti autem architecto iure accusamus cum beatae dolor cumque eaque labore nesciunt iste officiis commodi, eos minus minima quos officia corporis? Vel doloremque asperiores excepturi labore tenetur iste temporibus commodi neque, dolorem illum, architecto, laborum tempora distinctio ex ducimus recusandae similique amet eaque aut cum aperiam? Possimus neque fugiat harum odio molestiae, laborum aut minima id facilis hic adipisci quam expedita quas rem accusamus repudiandae delectus, numquam dolor error quo, cum ad iusto vero optio? Recusandae aperiam magni quo, delectus magnam consequatur quasi pariatur eligendi assumenda enim necessitatibus atque quibusdam quaerat accusantium. Officia dicta tenetur aliquid, fuga nihil similique, dolores doloribus deleniti accusamus quos repellat vel ducimus dolorem quibusdam ab. Libero nobis aut fugiat voluptatibus laudantium corporis quasi magnam, fuga reprehenderit? Amet omnis animi ea at odit tenetur, dolor temporibus iste sed alias eos, veritatis velit doloribus error quod labore laudantium hic placeat? Laboriosam reprehenderit delectus in numquam nisi unde vel culpa quas dignissimos accusamus quam incidunt quod facilis provident necessitatibus repellat nihil explicabo, quia sint natus officia voluptates aut.</p>
+
+	<p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minima quas necessitatibus inventore, odit architecto totam delectus quidem, obcaecati doloremque asperiores, distinctio dolorem aspernatur velit provident perspiciatis mollitia eligendi? Debitis temporibus explicabo, autem delectus quia, aspernatur molestiae ducimus aliquid repellat dignissimos suscipit! Tenetur corrupti omnis enim provident ab iusto quis rerum quaerat excepturi ea quam minus aut, ipsam modi optio inventore ipsa asperiores fugit magni corporis qui. Esse cum quaerat facere deleniti officia minima dolores earum, temporibus voluptatum? Corporis laudantium repudiandae dolores eveniet facere cupiditate eligendi, sequi recusandae nam culpa aperiam est molestias totam labore accusamus animi sapiente enim sunt alias magnam error. Consectetur sapiente expedita modi illum a molestias. Omnis dolorem cumque quo iusto aliquid excepturi exercitationem mollitia quidem aliquam quae? Eum blanditiis necessitatibus dolore officia perspiciatis ipsum consectetur et harum soluta, quo corporis consequuntur vitae ad eius excepturi voluptatibus iste error nemo minima explicabo? Quis voluptates modi dicta reiciendis? Aspernatur nam numquam architecto praesentium vitae deserunt sed. Perspiciatis magni delectus incidunt! Debitis labore eius blanditiis quam asperiores voluptates earum sequi placeat, enim ipsum, nemo accusamus repellendus suscipit veniam facilis, tempora similique quasi? Ipsa perspiciatis odit molestias minima incidunt nisi, placeat eveniet exercitationem! Ratione suscipit quas laboriosam deserunt. Deleniti delectus et aspernatur perspiciatis recusandae, porro molestiae ipsam. Neque quae sequi voluptas? Expedita et minima maiores laudantium similique exercitationem asperiores, quo repudiandae, fugit aliquid aut. Quam doloremque adipisci, veritatis quia iusto ullam exercitationem ipsum sed saepe est tempora totam. Commodi, soluta. Blanditiis officiis nemo ea corporis illo numquam sapiente magni.</p>
+	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--
+En CSS, on peut masquer un bloc en utilisant la propriété display:none.
+.masquer {
+	display: none;
+}
+Pour afficher ce même élément, on utilise display:block.
+-->
+
+<!--
+1 - Créez un document avec deux paragraphes contenant chacun du texte et une image.
+2 - Les images en sont pas visibles.
+3 - Au survol d'un paragraphe, l'image correspondante apparaît.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercice 48</title>
+	<style>
+		p img {
+			display: none;
+		}
+
+		p:hover img {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Exercice 48</h1>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eligendi numquam illum quos eveniet veniam? Minima, nobis. Nobis eveniet, repellendus cumque ipsam molestiae reprehenderit beatae similique, inventore rerum id animi.
+	<img src="images/paysage1.jpg" alt="Un paysage">
+	Dolor perspiciatis, commodi accusantium aut aspernatur quasi ab reiciendis animi voluptatum pariatur rerum cupiditate libero placeat deleniti. Asperiores consectetur vitae error odit in hic velit ad inventore, doloremque neque fugiat non et, soluta deserunt voluptate optio earum unde eaque quasi reiciendis labore quo. Sapiente ea dolores dolore ipsa consectetur nisi.</p>
+	<p>Reiciendis quos repellendus voluptatem nemo, quas labore alias. Rem assumenda vero neque ipsum tempora odit cum ipsam, deserunt soluta esse corporis debitis vel consequatur officia provident maxime dignissimos mollitia aliquam sed repudiandae quod.
+	<img src="images/paysage2.jpg" alt="Un autre paysage">
+	Perferendis sunt aspernatur quasi nisi consectetur architecto earum optio, quis quaerat repellat quidem, sint enim ipsa veritatis officiis atque non inventore provident, ducimus unde facere? Provident natus aliquam voluptatibus repellendus asperiores quasi tenetur, rem harum corporis animi architecto necessitatibus praesentium incidunt optio, minus non aspernatur. Ab, velit!</p>
+</body>
+</html>

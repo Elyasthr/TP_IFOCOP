@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>JavaScript : Exercice 43</title>
+		<script type="text/javascript">
+			/*********************************
+			***********PRESENTATION***********
+			**********************************
+				La fonction parseInt() renvoie la valeur entière d'un nombre. Par exemple, parseInt(4.7) renvoie 4.
+
+			/*********************************
+			*************EXERCICE*************
+			**********************************
+				Au chargement de la page, demandez à l'utilisateur quel jour de la semaine il est né (en donnant un entier entre 1 et 7). L'utilisateur doit forcément donner un nombre entre 1 et 7.
+				_ s'il répond lundi, vous affichez une réponse.
+				_ s'il répond mardi, mercredi ou jeudi; vous affichez une autre réponse.
+				_ s'il répond vendredi, vous affichez une troisième réponse.
+				_ s'il répond samedi ou dimanche, vous affichez une quatrième réponse.
+			*/
+			function fonction() {
+				var a; 
+				do {
+					a = parseFloat(prompt('Quelle j de la semaine etes vous née ? (entrez un nombre entre 1 et 7)'));
+					alert(a);
+				} while(a < 1 || a > 7);
+
+				switch (a) {
+					case 1:
+						alert('Lundi');
+						break;
+					case 2:
+					case 3:
+					case 4:
+						alert('mid-week');
+						break;
+					case 5:
+						alert('Vendredi');
+						break;
+					case 6:
+					case 7:
+						alert('week-end');
+						break;
+
+					default:
+						
+						alert('Bah degage');
+					}
+			}
+
+		</script>
+	</head>
+	<body onload="fonction();">
+		<h1>Mon nouveau document</h1>
+		<p>Premier paragraphe</p>
+		<p>Deuxième paragraphe</p>
+		<noscript>
+			<p>Veuillez activer JavaScript</p>
+		</noscript>
+	</body>
+</html>

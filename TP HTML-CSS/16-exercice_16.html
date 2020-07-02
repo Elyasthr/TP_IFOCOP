@@ -1,0 +1,66 @@
+<!--
+Dans le fragment de page suivant,
+<div>
+	<p>Un texte</p>
+</div>
+<div>
+	<a href="http://www.site.fr">
+		<p>Un autre texte</p>
+	</a>
+</div>
+
+Quand on écrit, par exemple,
+
+div p{
+	color: red;
+}
+
+,tous les p auront la couleur du texte en rouge.
+Si on écrit,
+
+div>p{
+	color: red;
+}
+
+seul <p>Un texte</p> sera en rouge.
+-->
+
+<!--
+	1 - Créez un document contenant un strong et deux p.
+	2 - Le premier p contient un strong.
+	3 - Le second p contient un cite qui contient un strong.
+	4 - Sans utiliser d'id ou de class ou de style écrit dans la balise, mettez une couleur différente sur chacun des strong.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 16</title>
+	<style>
+
+		strong{
+			color: brown;
+		}
+
+		p strong{
+			color: green;
+		}
+
+		p cite strong{
+			color: blue;
+		}
+
+	</style>
+</head>
+<body>
+
+	<strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, quod!</strong>
+
+	<p>Lorem <strong>dolor</strong> sit amet consectetur, adipisicing elit. Minus reiciendis dolor dicta soluta expedita nobis fugit labore, voluptate veniam optio, magnam modi magni nisi odio qui facilis, exercitationem dolores reprehenderit sed tempora eligendi unde quia! Labore laudantium quo dolore facilis. Neque, deleniti. Dolore, incidunt unde maxime dicta amet quam alias?</p>
+
+	<p><cite>Lorem <strong>ipsum</strong> dolor,</cite> sit amet consectetur adipisicing elit. Id eveniet libero possimus quaerat adipisci incidunt et sapiente doloremque minima voluptate amet ipsam aliquid dolorem, nostrum, similique autem tempore velit eius soluta labore dignissimos. Explicabo similique quae ut! Dignissimos odio praesentium, deserunt, alias rem commodi necessitatibus est possimus minima, odit deleniti.</p>
+
+	
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript & DOM : Les Objets - Exercice 4</title>
+    <script>
+      //Énoncé :
+      /*
+        1. Créez 1 objet JSON. Cet objet représente un enseignant.
+        Il a 5 propriétés : son nom, son prénom, son âge, sa discipline enseignée, sa présence.
+        - Son âge est un nombre;
+        - Sa présence est un booléen;
+        - Son nom est une chaîne de caractères;
+        - Son prénom est une chaîne de caractères;
+        - Sa discipline enseignée est une chaîne de caractères.
+      */
+      var enseignant = {
+        nom: 'TOUAHRIA',
+        prenom: 'Elyas',
+        age: 25,
+        discipline: 'Cours de Vie',
+        presence: true,
+      };
+
+      /*
+        2. Créez 1 objet JSON. Cet objet représente une classe.
+        Il a 3 propriétés : son numéro, sa spécialité, son enseignant.
+        - Son numéro est un nombre;
+        - Sa spécialité est une chaîne de caractères;
+        - Son enseignant est un objet.
+      */
+      var classe = {
+        numero: 7,
+        specialite: 'SIN',
+        enseignant: enseignant,
+      };
+      
+      /*
+        3. Créez 3 objets JSON. Ces objets représentent des élèves.
+        Chaque élève a 4 propriétés : son nom, son prénom, son âge, sa présence.
+        - Son âge est un nombre;
+        - Sa présence est un booléen;
+        - Son nom est une chaîne de caractères;
+        - Son prénom est une chaîne de caractères.
+      */
+      var eleve1 = {
+        nom: 'TOUAHRIA',
+        prenom: 'Djamel',
+        age: 51,
+        presence: true, 
+      };
+
+      var eleve2 = {
+        nom: 'MANSEUR',
+        prenom: 'Zahia',
+        age: 50,
+        presence: false, 
+      };
+
+      var eleve3 = {
+        nom: 'TARCHOUNE',
+        prenom: 'Mebarka',
+        age: 79,
+        presence: false, 
+      };
+
+
+      /*
+        4. Ajoutez une nouvelle propriété dans l'objet représentant la classe. Cette propriété sera les élèves. Elle devra contenir les 3 références vers les 3 objets représentant chacun des 3 élèves.
+        - Les élèves est un tableau.
+      */
+      classe.eleves = [eleve1,eleve2,eleve3];
+    
+      /*
+        5. Changez la propriété de présence du 2ème élève de la liste d'élèves de la classe.
+      */
+      eleve2.presence = true;
+      
+      /*
+        6. Réalisez l'algorithme suivant :
+        POUR CHAQUE élève dans la classe, AFFICHEZ dans une boite de dialogue le message (où X et Y sont les prénoms et noms de l'élève considéré): 'Je suis X Y et je suis présent'. 
+      */
+      /*for(i=0; i < classe.eleves.length; i++){
+        alert('Je suis ' + classe.eleves[i].prenom + ' ' +classe.eleves[i].nom + ' et je suis présent.');
+      }*/
+      /*
+        7. Assurez vous que les booléens de présence des élèves ne sont pas tous les mêmes. Réalisez l'algorithme suivant : 
+        POUR CHAQUE élève dans la classe, SI sa propriété présence est vraie, AFFICHEZ dans un boite de dialogue le message (où X et Y sont les prénoms et noms de l'élève considéré): 'Je suis X Y et je suis présent'. 
+      */ 
+      for(i=0; i < classe.eleves.length; i++){
+        if(classe.eleves[i].presence){
+          alert('Je suis ' + classe.eleves[i].prenom + ' ' +classe.eleves[i].nom + ' et je suis présent.');
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>Titre principal</h1>
+    <ul>
+      <li>Premier point</li>
+      <li>Deuxième point</li>
+      <li>Troisième point</li>
+    </ul>
+    <div>
+      <h2><span>1</span>. Titre de la première section</h2>
+      <p><span>1.1</span>. Premier paragraphe de la première section.</p>
+      <p><span>1.2</span>. Deuxième paragraphe de la deuxième section.</p>
+    </div>
+    <div>
+      <h2><span>2</span>. Titre de la deuxième section</h2>
+      <p><span>2.1</span>. Premier paragraphe de la deuxième section.</p>
+      <p><span>2.2</span>. Deuxième paragraphe de la deuxième section.</p>
+    </div>
+    <div>
+      <h2><span>3</span>. Titre de la troisième section</h2>
+      <p><span>3.1</span>. Premier paragraphe de la troisième section.</p>
+      <p><span>3.2</span>. Deuxième paragraphe de la troisième section.</p>
+    </div>
+  </body>
+</html>

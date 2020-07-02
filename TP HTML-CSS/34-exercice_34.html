@@ -1,0 +1,54 @@
+<!--
+Jusqu'à maintenant, nous avons appliqué une couleur de fond à nos blocs.
+On peut également appliquer une image à un bloc.
+de la façon suivante :
+p{
+	background-image: url("fond.jpg");
+}
+Plusieurs réglages supplémentaires sont possibles :
+_ background-position : position initiale d'une image d'arrière-plan
+_ background-origine : position de l'origine d'une image
+_ background-size: dimension de l'image d'arrière-plan 
+_ background-repeat :  spécifie la façon dont l'image d'arrière-plan doit être répétée
+
+-->
+
+<!--
+	1 - Créez un document avec un h1 et un paragraphe.
+	2 - Mettez une image d'arrière plan sur le h1. Choisissez une image de quelques pixels de côté.
+	3 - Mettez une image d'arrière plan sur le paragraphe. L'image sera moins grande que la largeur de la page. Faites répéter cette image. 
+	4 - Mettez une image d'arrière plan sur le body. À l'aide de background-size, remplissez la page sans déformer l'image.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 34</title>
+	<style>
+		body{
+			background-image: url('images/b1.png');
+			color: white;
+			
+			background-size: cover;
+		}
+		h1{
+			background-image: url('images/bh1.png');
+			
+
+		}
+
+		p{
+			background-image: url('images/bp.jpg');
+			background-repeat:repeat;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Titre</h1>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In amet aut libero aspernatur quo maiores aliquid culpa. Adipisci maiores repellendus exercitationem illum est non neque nihil perspiciatis, aspernatur quo ex magnam tempore. Veniam, perspiciatis nulla distinctio dolores est sint, sapiente eos esse eligendi adipisci rem labore ea omnis, inventore quasi eius ducimus ipsa voluptates voluptatibus assumenda earum reprehenderit quaerat deleniti. Sint autem, cum iusto, quo nihil laborum odio commodi molestias quis veniam quaerat. Iusto vero dolor quasi eius rerum cumque? Distinctio ea id commodi dolorem eos quisquam excepturi cum quia quis odio similique veniam, necessitatibus dolores dicta! Sit, reiciendis? Architecto distinctio ullam ducimus dolorum et quo ad qui, dolore laudantium! Adipisci quaerat distinctio facilis temporibus consequuntur quidem architecto, non eaque sequi, quos asperiores totam tenetur assumenda cum accusantium! Perspiciatis possimus magnam voluptatum placeat blanditiis. Commodi quasi qui dignissimos expedita distinctio, voluptate saepe nostrum in adipisci animi consequuntur impedit cum, sunt amet similique ut. Sed, quisquam! Quibusdam dicta non unde quasi culpa molestiae velit placeat ratione magni, quod quis cumque. Accusantium aut non excepturi similique ipsam, inventore ab alias perferendis labore, nam sapiente ducimus quos in, delectus itaque id voluptatum sed? Nam ad nihil labore suscipit rem velit animi provident optio?</p>
+	
+</body>
+</html>

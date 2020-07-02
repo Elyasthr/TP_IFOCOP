@@ -1,0 +1,52 @@
+<!--
+De nombreuses règles CSS permettent de mettre en forme le texte. Parmi celles-ci, on trouve :
+_ font-size : taille de la police.
+_ font-style : police en normal, italique ou oblique.
+_ font-weight : gestion de la graisse de la police
+
+Les dimensions sont données :
+_ en pixels (px), par exemple font-size: 13px;
+_ en cadratin (em), par exemple font-size: 1.6em;
+-->
+
+<!--
+  1 - Créez un document.
+  2 - Vous y inséré deux ensemble : h1 h2 p
+  3 - Modifiez la taille de police par défaut de chaque balise (en pixels).
+  4 - Mettez les h1 en italique, les h2 en normal et une partie des paragraphes en gras et italique.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 22</title>
+  <style>
+    body{
+      font-size: 20px;
+    }
+
+    h1{
+      font-style: italic;
+    }
+
+    #para{
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Titre</h1>
+
+  <h2>Sous - Titre</h2>
+
+  <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio, magni ut distinctio sunt dicta voluptatem repellendus, eius, aperiam perspiciatis animi! Numquam, impedit. Esse, voluptate! Error minus ut saepe modi adipisci quam maxime laboriosam porro quia facere, cumque repellendus nesciunt. Distinctio cupiditate in voluptatem soluta fugiat sed autem tenetur quidem!</p>
+  
+  <h1>Titre</h1>
+
+  <h2>Sous - Titre</h2>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio, magni ut distinctio sunt dicta voluptatem repellendus, eius, aperiam perspiciatis animi! Numquam, impedit. Esse, voluptate! Error minus ut saepe modi adipisci quam maxime laboriosam porro quia facere, cumque repellendus nesciunt. Distinctio cupiditate in voluptatem soluta fugiat sed autem tenetur quidem!</p>
+</body>
+</html>

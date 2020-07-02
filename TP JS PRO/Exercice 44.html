@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>JavaScript : Exercice 44</title>
+		<script type="text/javascript">
+			/*********************************
+			***********PRESENTATION***********
+			**********************************
+				L'instruction if/else permet seulement de prendre deux cas en compte pour une expression. En revanche; L'instruction switch permet d'évaluer une expression selon un nombre de cas non limité.
+
+				Cette instruction s'écrit de la façon suivante :
+				switch (expression) {
+				  case valeur1:
+					// Instruction s'exécutant lorsque l'expression correspond à valeur1
+					instructions1;
+					break;
+				  case valeur2:
+					// Instruction s'exécutant lorsque l'expression correspond à valeur2
+					instructions 2;
+					break;
+				  ...
+				  default:
+					// Instructions quand aucune des valeurs ne correspond
+					instructions_par_defaut;
+				}
+
+				Le break à la fin d'une instruction n'est pas obligatoire, mais il est fortement recommandé. Ainsi, seules les instructions correspondant à cette instruction seront exécutés.
+				Le cas par défaut (default) est également optionnel.
+			*/
+
+			/*********************************
+			*************EXERCICE*************
+			**********************************
+				Reprenez l'exercice précédent en remplaçant les instructions if/else par un switch.
+			*/
+			function fonction() {
+				var a; 
+				do {
+					a = parseFloat(prompt('Quelle j de la semaine etes vous née ? (entrez un nombre entre 1 et 7)'));
+					alert(a);
+				} while(a < 1 || a > 7);
+
+				switch (a) {
+					case 1:
+						alert('Lundi');
+						break;
+					case 2:
+					case 3:
+					case 4:
+						alert('mid-week');
+						break;
+					case 5:
+						alert('Vendredi');
+						break;
+					case 6:
+					case 7:
+						alert('week-end');
+						break;
+
+					default:
+						
+						alert('Bah degage');
+					}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Mon nouveau document</h1>
+		<p>Premier paragraphe</p>
+		<p>Deuxième paragraphe</p>
+		<noscript>
+			<p>Veuillez activer JavaScript</p>
+		</noscript>
+	</body>
+</html>

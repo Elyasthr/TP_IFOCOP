@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript & DOM : Le Modèle Objet du Document - Exercice 22</title>
+    <script>
+      //Énoncé :
+
+      /*
+        Créez un formulaire avec un champ de saisie et un bouton submit. L'attribut action du formulaire sera : http://www.google.com, l'attribut method sera : GET.
+      */
+      
+      /*
+        1. A la soumission du formulaire (évènement onsubmit spécifique au éléments HTML de type form), afficher dans une boite de dialogue la valeur saisie dans le champ de saisie du formulaire. (l'attribut correspondant à la valeur du champ porte le même nom que la propriété de l'objet correspondant en mémoire).
+      */
+      window.addEventListener('load',function(){
+        var elmt = document.querySelector('form');
+        var val = document.querySelector('input');
+        var para = document.createElement('p');
+        
+        para.setAttribute('class','erreur');
+        para.innerText = "remplir le champs";
+        para.style.cssText = "border: 1px solid red; width : 150px;";
+        
+        elmt.addEventListener('submit',function(e){
+          
+          if(val.value == ''){
+            document.querySelector('body').appendChild(para);
+            e.preventDefault();
+          }
+          
+        })
+      })
+        
+        /*
+        2. A la soumission du formulaire, SI le champ est vide, je crée une élément HTML de type p avec la class erreur et je l'ajoute dans le document en dessous du formulaire et j'empêche le formulaire d'être envoyé par le navigateur Internet.
+      */
+      
+
+      /*
+        Astuce : Si dans un gestionnaire d'évènement (fonction/méthode associée à l'événement), j'exécute la méthode .preventDefault() de l'objet d'évènement, le navigateur Internet ne poursuit pas le comportement par défaut associé à l'événement. Cette méthode est documentée sur le MDN ici : https://developer.mozilla.org/fr/docs/Web/API/Event/preventDefault
+      */
+    </script>
+  </head>
+  <body>
+    <form action="http://www.google.com" method="GET">
+      <label for="prenom">Saisissez votre prénom :</label>
+      <input type="text" name="prenom" id="prenom" />
+    </form>
+  </body>
+</html>

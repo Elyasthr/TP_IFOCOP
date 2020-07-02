@@ -1,0 +1,64 @@
+<!--
+	On peut spécifier différentes zones dans le tableau au moyen des balises thead, tbody et tfoot.
+	Dans l'ordre de déclaration, on débute par le thead, puis le tfoot et enfin le tbody.
+-->
+
+<!--
+	1 - Reprenez le tableau de l'exercice précédent
+	2 - Mettez la première ligne en gras au moyen de la balise thead.
+	3 - Répétez les informations de la première ligne dans une autre ligne située à la base du tableau. Mettez également cette ligne en gras.
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice 43</title>
+	<style>
+		table{
+			border: 3px solid black;
+		}
+		th, td{
+			border: 1px dashed black;
+		}
+		th{
+			background-color: gray;
+			color: aliceblue;
+			
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Ville</th>
+				<th>Département</th>
+				<th>Region</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+		<tr>
+			<td>Bagnolet</td>
+			<td>Seine-Saint-Denis</td>
+			<td>Ile-de-France</td>
+		</tr>
+		<thead>
+			<tr>
+				<td>Bagnolet</td>
+				<td>Seine-Saint-Denis</td>
+				<td>Ile-de-France</td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>
