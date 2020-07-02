@@ -19,6 +19,37 @@
       /*
         2. Créez l'algorithme suivant : Quand on clique sur un paragraphe de texte, on déclenche un script qui récupère une référence à l'objet <canvas> (en utilisant la méthode .getElementById() par exemple). Vérifier à l'aide de la méthode .log() de la console que vous arrivez à récupérer un objet de type HTMLCanvasElement
       */
+      window.addEventListener('load',function(){
+        
+        var paragraphe = document.querySelectorAll('p');
+        var myCanvas = document.getElementById('tutoriel');
+        var largeurcan = myCanvas.width;
+        var hauteurcan = myCanvas.height;
+
+        var ctx = myCanvas.getContext('2d');
+        var i = 0;
+
+        //AVEC ANIMATION AVEC SETTIMEOUT ET SETINTERVAL
+        window.setTimeout(function(){
+          window.setInterval(function(){
+          ctx.clearRect(10,10,largeurcan,hauteurcan);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10 + i , 10 + i , 50, 50);
+          i += 2;
+          },10);
+        }, 1000);
+
+        //AVEC FONCTION RECURSIVE
+        function repeatOften() {
+          ctx.clearRect(10,10,largeurcan,hauteurcan);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10 + i , 10 + i , 50, 50);
+          i += 2;
+          requestAnimationFrame(repeatOften);
+        }
+        requestAnimationFrame(repeatOften);
+
+    })
 
       /*
         L'objet correspondant à la balise <canvas> dispose d'une méthode .getContext() qui vous permet de récupérer un autre objet adapté au dessin 2d dans ce contexte. Voir la MDN ici : https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D
@@ -35,8 +66,14 @@
         5. Créez un dessin animé à l'aide window.setTimeout(), puis avec window.setInterval() et enfin avec window.requestAnimationFrame()
       */
     </script>
+    <style>
+      canvas{
+        border: 1px solid red;
+      }
+    </style>
   </head>
   <body>
+    <canvas id="tutoriel" width="300" height="300"></canvas>
     <h1>Titre principal</h1> 
     <ul>
       <li>Premier point</li>
