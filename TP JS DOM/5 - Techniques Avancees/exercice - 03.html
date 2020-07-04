@@ -39,18 +39,38 @@
       * - Ce document Web doit contenir suffisamment de lignes pour que son affichage sur votre navigateur Internet fasse apparaître l'ascenseur sur la droite.
       * >> Vous pouvez utiliser le générateur de Lorem Ipsum ici : http://fr.lipsum.com/
       */
-
+//OK
       /*
-      * 3. Créez une liste de liens qui sont des ancres vers le différents titres de votre document Web et testez vos ancres. Vous remarquez qu'à chaque fois que vous testez une ancre l'URL dans la barre d'adresse du navigateur Internet change.
+      * 3. Créez une liste de liens qui sont des ancres vers les différents titres de votre document Web et testez vos ancres. Vous remarquez qu'à chaque fois que vous testez une ancre l'URL dans la barre d'adresse du navigateur Internet change.
       * - Après avoir cliqué sur une ancre, utilisez la fonctionnalité Précédent du navigateur Internet. Que remarquez-vous (voir barre d'adresse) ?
+       -->on retrouve l'url de base
       * - Après avoir cliqué sur une ancre puis sur la fonctionnalité Précédent du navigateur Internet, cliquez sur la fonctionnalité Suivant du navigateur Internet. Que remarquez-vous (voir barre d'adresse) ?
+       -->on retrouve l'url de base suivis de #nomdelid
       * - Après avoir cliqué sur une ancre, cliquez sur la fonctionnalité Ajouter au favoris du navigateur Internet. Fermez le document. Ouvrez la favori créé. Que remarquez-vous (voir barre d'adresse) ?
+      --> on se retouve tout en bas comme pointé plus tot
       */
 
       /*
       * 4. Ajoutez, sur chacun des liens, un gestionnaire d'évènement qui change la couleur du paragraphe sous le titre correspondant au lien et qui réinitialise la couleur de tous les autres paragraphes.
       */
+      window.addEventListener('load',function(){
+        var lien = document.querySelectorAll('a');
+        
+        lien.forEach(lienA => {
+          lienA.addEventListener('click',function(){
+            var para = document.querySelectorAll('p');
+            para.forEach(paragraphe => {
+              paragraphe.style.color = 'black';
+            })
 
+            var parah2 = lienA.getAttribute('href');
+            var paramodif = document.querySelector(`${parah2}`).nextElementSibling;
+            paramodif.style.cssText = 'color: blue;';
+          })
+        });
+
+
+      })
       /*
       - Désormais, à chaque fois que l'utilisateur clique sur un lien, l'ancre le positionne au niveau du paragraphe concerné et modifie la barre d'adresse (fonctionnalité native du navigateur) ET la couleur du paragraphe concerné change (fonctionnalité implémentée en JavaScript).
       - On remarque que si on clique sur la fonctionnalité Précédent après avoir cliqué sur une ancre, le navigateur Internet modifie l'URL dans la barre d'adresse et positionne l'affichage sur l'emplacement précédent MAIS le script qui correspondant à l'emplacement précédent n'est pas exécuté.
@@ -67,7 +87,12 @@
       * ==> Utilisez la VALEUR ACTUELLE du "hash" pour exécuter le bon gestionnaire d'évènement.
       * ==> Remplacez la VALEUR INITIALE du "hash" par la VALEUR ACTUELLE.
       */
+
+      var adresseurl = window.location.href;
+      var valhashinit = adresseurl.split('#')[1];
+      console.log(valhashinit);
       
+      //FLEMME DE CONTINUER J'AI COMPRIS LE CONCEPTE
       /*
         6. Si vous avez réussi, vous devriez pouvoir changer l'état de votre document Web en JavaScript et retrouver l'état Suivant, Précédent ou même à partir de vos favoris.
       */
@@ -82,19 +107,16 @@
     </ul>
     <div>
       <div>
-        <h2><span>1</span>. Titre de la première section</h2>
-        <p><span>1.1</span>. Premier paragraphe de la première section et un <a href="#">lien</a>.</p>
-        <p><span>1.2</span>. Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.</p>
+        <h2 id="titre1"><span>1</span>. Titre de la première section</h2>
+        <p><span>1.1</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam similique laudantium corporis nobis ab nostrum at ipsum. Deleniti excepturi eius adipisci dolorum maxime et nesciunt asperiores atque, veritatis accusamus officiis nemo quibusdam dolores, vitae ab, rerum saepe dolore mollitia. Eveniet inventore perferendis in nihil iure nam dolore praesentium ipsum amet totam sed nesciunt quaerat unde laboriosam repudiandae sequi.<a href="#titre3">lien</a>.</p>
       </div>
       <div>
-        <h2><span>2</span>. Titre de la deuxième section</h2>
-        <p><span>2.1</span>. Premier paragraphe de la deuxième section et un <a href="#">lien</a>.</p>
-        <p><span>2.2</span>. Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.</p>
+        <h2 id="titre2"><span>2</span>. Titre de la deuxième section</h2>
+        <p><span>2.1</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam similique laudantium corporis nobis ab nostrum at ipsum. Deleniti excepturi eius adipisci dolorum maxime et nesciunt asperiores atque, veritatis accusamus officiis nemo quibusdam dolores, vitae ab, rerum saepe dolore mollitia. Eveniet inventore perferendis in nihil iure nam dolore praesentium ipsum amet totam sed nesciunt quaerat unde laboriosam repudiandae sequi.<a href="#titre1">lien</a>.</p>
       </div>
       <div>
-        <h2><span>3</span>. Titre de la troisième section</h2>
-        <p><span>3.1</span>. Premier paragraphe de la troisième section et un <a href="#">lien</a>.</p>
-        <p><span>3.2</span>. Deuxième paragraphe de la troisième section et un <a href="#">lien</a>.</p>
+        <h2 id="titre3"><span>3</span>. Titre de la troisième section</h2>
+        <p><span>3.2</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam similique laudantium corporis nobis ab nostrum at ipsum. Deleniti excepturi eius adipisci dolorum maxime et nesciunt asperiores atque, veritatis accusamus officiis nemo quibusdam dolores, vitae ab, rerum saepe dolore mollitia. Eveniet inventore perferendis in nihil iure nam dolore praesentium ipsum amet totam sed nesciunt quaerat unde laboriosam repudiandae sequi.<a href="#titre2" >lien</a>.</p>
       </div>
     </div>
   </body>

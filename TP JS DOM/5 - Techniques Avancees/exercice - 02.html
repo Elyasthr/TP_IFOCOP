@@ -10,13 +10,24 @@
         1. On créé en mémoire l'objet de type élément HTML correspondant au type de ressource à précharger en utilisant la méthode .createElement() de document.
         2. On affecte comme valeur de la propriété .src le lien vers la ressource. Le navigateur Internet envoi immédiatement une requête HTTP à l'url affectée pour demander le téléchargement de la ressource.
         3. On affecte un gestionnaire d'évènement à l'évènement load de la balise. Au Chargement de la ressource, cette fonction sera donc déclenchée par le navigateur Internet.
-        4. Lorsque la ressource est chargée, on déclenche un programme qui va positionner la ressource dans le DOM du document Web affiché. On peut imaginer que initialement l'élément HTML dans lequel la ressource sera positionnée contient une image en .GIF animée qui affiche une animation d'attente qui sera supprimée au remplacement.
+        4. Lorsque la ressource est chargée, on déclenche un programme qui va positionner la ressource dans le DOM du document Web affiché.//FLEMME DE FAIRE SA JAI COMPRIS DE TOUTE FACON ==> On peut imaginer que initialement l'élément HTML dans lequel la ressource sera positionnée contient une image en .GIF animée qui affiche une animation d'attente qui sera supprimée au remplacement.
       */
 
       //Énoncé :
       /*
         1. Implémentez le préchargement d'un image de très grande taille (+ de 10 Mo). Pensez à désactiver le cache ou le vider entre chaque essai pour que l'exercice soit pertinent
       */
+      window.addEventListener('load',function(){
+        var image = document.createElement('img');
+        image.setAttribute('src','http://www.influenth.com/wp-content/uploads/2016/07/giphy.gif');
+
+        image.addEventListener('load',function(){
+          var titre = document.querySelector('h1');
+          titre.appendChild(image);
+        })
+      })
+      
+
     </script>
   </head>
   <body>

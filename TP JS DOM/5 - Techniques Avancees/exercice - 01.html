@@ -13,7 +13,11 @@
       /*
       1. Créez un objet en JSON qui contient 3 méthodes.
       */
-
+      var voiture = {
+        demarre:function(){console.log('Brrbrr !'); return voiture;},
+        roule:function(){console.log('Vrooooom !'); return voiture;},
+        freine:function(){console.log('Krrrrrrr !'); return voiture;},
+      };
       /*
       2. Comment obtient-on, dans une méthode, une référence à l'objet contenant la méthode ? Retournez cette référence à partir de chacune des méthodes. 
       */
@@ -21,19 +25,21 @@
       /*
       3. Exécutez les 3 méthodes sur UNE SEULE ligne.
       */
-
+      //voiture.demarre().roule().freine();
       /*
       4. Créez une fonction usine qui retourne l'objet.
       */
-
+      var $voitureFactory = function(){
+        return  voiture;
+      }
       /*
       5. Exécutez la fonction usine et les 3 méthodes sur UNE SEULE ligne.
       */
-
+      //a45amg = voitureFactory().demarre().roule().freine();
       /*
       6. Renommez votre fonction usine avec le caractère $ et exécutez la fonction usine et les 3 méthodes sur une seule ligne.
       */
-
+      rs3 = $voitureFactory().demarre().freine().roule();
       /*
       7. Vous venez de comprendre un mécanisme de base de la librairie jQuery !
       */

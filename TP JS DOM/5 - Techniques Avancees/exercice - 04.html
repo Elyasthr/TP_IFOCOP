@@ -21,7 +21,18 @@
         2. AU CLICK sur un élément HTML du document Web, crééz dans le DOM une balise script avec pour fichier source le fichier .js que vous avez créé. Vous donner la valeur true à la propriété .async de l'objet représentant la balise script. AU Chargement de votre balise script, exécutez une fonction que vous avez créé. Cette fonction exécute la méthode qui affiche le râle du fantôme.
         La documentation de la balise script sur le MDN est accessible ici : https://developer.mozilla.org/fr/docs/Web/HTML/Element/script
       */
+      window.addEventListener('click',function(){
+        var fichier = document.createElement('script');
+        fichier.setAttribute('src','test.js');
+        fichier.async = 'true';
 
+        var body = document.querySelector('body');
+        body.appendChild(fichier);
+
+        fichier.addEventListener('load',function(){
+          fantome.rale();
+        })
+      })
       /*
       * Vous avez chargé votre script de façon asynchrone à la demande.
       */
@@ -32,6 +43,12 @@
         - La fonction fournie est appelée dans le jargon des développeur un callback (littéralement, une fonction qui sera appelée plus tard).
         - La fonction à créer est généralement appelée "require" ou "define".
       */
+      //PAS TROP COMPRIS CE POINT, JE NE PENSE PAS AVOIR JUSTE...
+      var maFonction = function(nomfichier,fonction){
+          nomfichier.addEventListener('load',function(){
+            fantome.rale();
+          })
+      }
 
       /*
       * Vous venez de créer une fonction pour AMD ! Vous pouvez utilisez la librairie http://requirejs.org/ pour bénéficier d'un boîte à outil pour les AMD qui prend en compte un la compatibilité inter navigateurs, un ensemble d'optimisation et de bonnes pratiques pour la gestion des AMD.
