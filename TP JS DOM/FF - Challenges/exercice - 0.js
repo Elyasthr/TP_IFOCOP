@@ -1,14 +1,20 @@
 /*
-	L'objectif de cet exercice est de créer une
+	L'objectif de cet exercice est de crï¿½er une
 	animation dans un balise canvas. Il s'agit
-	d'animer un lever - couché de soleil sur une
+	d'animer un lever - couchï¿½ de soleil sur une
 	plaine.
 
-	- Crééz une balise canvas;
-	- Créez un dessin qui représente le ciel;
-	- Créer un dessin qui représente le soleil;
-	- Créez un dessin qui représente votre plaine;
-	- Le soleil doit décrire un arc de cercle au dessus de la plaine;
-	- La luminosité ambiante doit varier en fonction de la hauteur
+	- Crï¿½ï¿½z une balise canvas;
+	- Crï¿½ez un dessin qui reprï¿½sente le ciel;
+	- Crï¿½er un dessin qui reprï¿½sente le soleil;
+	- Crï¿½ez un dessin qui reprï¿½sente votre plaine;
+	- Le soleil doit dï¿½crire un arc de cercle au dessus de la plaine;
+	- La luminositï¿½ ambiante doit varier en fonction de la hauteur
 	  du soleil dans l'espace de dessin.
 */
+
+//creer un soleil qui apparait puis disparait, et quand cela se produit la couleur du ciel et de la pleine s'assombrit
+
+//un timer qui fait apparaitre puis disparaitre le soleil lentement et indefiniment
+
+// si reussi rajouter lune + etoile quand soleil disparait ?
