@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>jQuery : Exercice 06</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<link rel="stylesheet" href="../src/styles1.css">
 	<script>
 		/*********************************
@@ -18,26 +19,42 @@
 		*************EXERCICES*************
 		***********************************
 		** 1 **
-			Créez un class pour styler les paragraphes. À la fin du chargement du document, ajoutez cette class au second paragraphe de la section.
+			Créez une class pour styler les paragraphes. À la fin du chargement du document, ajoutez cette class au second paragraphe de la section.
 			Utilisez addClass().
 		*/
+		$(function(){
+			$('section div:nth-of-type(2) p:first-child').addClass('maclasse');
+		
+		
 
 		/*
 		** 2 **
 			Créez une second class pour styler des paragraphes. À la fin du chargement du document, ajoutez cette class aux premier et troisième paragraphe de la section.
 			Utilisez addClass().
 		*/
-
+			$('section p:not(p.maclasse)').addClass('autreclasse');
 		/*
 		** 3 **
 			Deux secondes après la fin du chargement du document, enlevez les deux class créées.
 			Utilisez removeClass().
 		*/
 
+			setTimeout(
+				() => {$('section p').removeClass();}
+					,2000);
 
+		})
 	</script>
 	<style>
+		.maclasse{
+			color: blue;
+			text-decoration: underline;
+		}
 
+		.autreclasse{
+			color: red;
+			text-decoration: line-through;
+		}
 	</style>
 </head>
 

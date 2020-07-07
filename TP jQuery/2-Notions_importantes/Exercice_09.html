@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>jQuery : Exercice 9</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<link rel="stylesheet" href="../src/styles1.css">
 	<script>
 		/*********************************
@@ -19,14 +20,17 @@
 			À la fin du chargement du document, changez la valeur sélectionnée dans le select.
 			Utilisez val().
 		*/
+		$(function(){
 
+			$('#page > form > div:nth-child(2) > fieldset > select').val('impasse');
 		/*
 		** 2 **
 			Vous pouvez passez plusieurs valeurs dans val() au moyen d'un tableau. À la fin du chargement du document, changez l'attribut du select pour permettre la sélection multiple et changez la valeur sélectionnée dans le select en choisissant deux valeurs.
 			Utilisez attr() et val().
 		*/
-
-
+		var choix = ['rue','impasse'];
+		$('#page > form > div:nth-child(2) > fieldset > select').attr('multiple','multiple').val(choix);
+	})
 	</script>
 </head>
 

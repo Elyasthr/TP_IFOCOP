@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>jQuery : Exercice 07</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<link rel="stylesheet" href="../src/styles1.css">
 	<script>
 		/*********************************
@@ -19,27 +20,41 @@
 			Créez une class pour styler les paragraphes. À la fin du chargement du document, ajoutez cette class au second paragraphe de la section.
 			Utilisez attr().
 		*/
+		$(function(){
 
+			$('section div:nth-of-type(2) p:first-child').attr('class','maclasse');
+
+		
 		/*
 		** 2 **
 			À la fin du chargement du document, créez un nouveau lien dans la balise div#message. Ajoutez à ce lien un titre ayant pour texte le titre de la page.
 			Utilisez html() et attr.
 		*/
-
+			$('div#message').html('<a>Titre de la page</a>').attr('title','titredelapage');
 		/*
 		** 3 **
 			À la fin du chargement du document, créez un nouvel objet Date. À partir de cet objet, affichez dans la div#message le jour de la semaine sous forme textuelle.
 			Utilisez l'objet Date, la méthode getDay de l'objet Date et html().
 		*/
+			var objdate = new Date();
+			var weekday = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
 
+			$('div#message').html(weekday[objdate.getDay()]);
 		/*
 		** 4 **
 			À la fin du chargement du document, créez un nouvel objet Date. À partir de cet objet, affichez dans le bouton submit, le texte du bouton suivi  "le [jour de la semaine]" où [jour de la semaine] correspond au jour de la semaine sous forme textuelle.
 			Utilisez l'objet Date, la méthode getDay de l'objet Date et attr().
 		*/
 
+			$('.form_div input:last-child').attr('value',`le ${weekday[objdate.getDay()]}`);
+
+		})
 	</script>
 	<style>
+		.maclasse{
+			color: blue;
+			text-decoration: line-through;
+		}
 	</style>
 </head>
 
