@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>jQuery : Exercice 10</title>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<link rel="stylesheet" href="../src/styles1.css">
 		<script>
       /*********************************
@@ -25,7 +26,30 @@
 
         Utilisez les méthodes resize(), css(), addClass() et removeClass().
       */
-
+		$(function(){
+			var largeur;
+			
+			$(window).resize(function(){
+				largeur = $('body').width();
+				console.log(largeur);
+				
+				if(largeur <= 640){
+					console.log('ok3');
+					$('body').css('font-size','10px');
+				}
+				
+				else if(largeur <= 920){
+					console.log('ok2');
+					$('section p').css({'display':'list-item'});
+				}
+				
+				else{
+					console.log('ok1');
+					$('section p, body').removeAttr('style');
+				}
+				
+			});
+		
       /*
       ** 2 **
         À la fin du chargement du document, prévoyez le script suivant :
@@ -34,7 +58,16 @@
 
         Utilisez les méthodes scroll() et css().
       */
-
+	  
+	  		$(window).scroll(function(){
+				$('section div').html('<img src="../src/theImg.jpeg" />').css('position','fixed');
+				clearTimeout(letimer);
+  				//console.log('ceci est un test');
+				var letimer = setTimeout(function(){
+					$('img').hide();}
+					,100);
+			});
+		})
 		</script>
 	</head>
 	<body>
