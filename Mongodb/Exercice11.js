@@ -1,11 +1,8 @@
 // Vélib
-
 // Récupérer un fichier json des velib chez jcdecaux developer
 // Importer dans la base paris, le fichier jcdecaux.json dans une collection velib
-
-
 // Cette fois-ci les données sous fournies sous la forme d'un tableau d'objets, il faut donc ajouter l'option --jsonArray pour importer
-mongoimport --db paris --collection velib --file ../sampleData/jcdecaux.json --jsonArray
+//mongoimport --db paris --collection velib --file jcdecaux.json --jsonArray
 
 // Problème ! On n'a pas de champ codepostal ... On retrouve le code postal dans l'adresse.
 

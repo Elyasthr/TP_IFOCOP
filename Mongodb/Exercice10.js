@@ -1,10 +1,9 @@
 // Aggrégation
 
 // Importer dans une base le fichier website.json
-mongoimport --file website.json --db websites --collection sites
+//mongoimport --file website.json --db websites --collection sites
+//use websites
 
-
-use websites
 // Quel est l'hébergeur qui héberge le plus de sites ?
 
 // Pour l'hébergeur gandi, quel site a le plus de traffic
