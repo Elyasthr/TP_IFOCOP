@@ -30,20 +30,22 @@
     https://www.npmjs.com/package/chalk
 **/
 
-/**
+/**npm
   Exercice :
 
     1.
     Initialisez un projet npm et installez le module chalk. Puis verifiez
     qu'il est bien installé dans le dossier node_modules de votre projet.
 **/
-
+//OK C'EST FAIT
 /**
     2.
     Chargez le module chalk dans votre module principal et affichez dans la
     console en VERT un message pour indiquer que chalk est installé.
 **/
-
+const chalk = require('chalk');
+ 
+//console.log(chalk.white.bgGreen('Chalk est installé'));
 /**
     3.
     - Affichez un message d'erreur en rouge
@@ -54,6 +56,14 @@
       * par exemple: `Ceci est un message important !`
 **/
 
+const erreur = chalk.white.bgRed;
+const debug = chalk.white.bgGray;
+const important = chalk.bold;
+
+console.log(erreur('Une erreur est survenue !'));
+console.log(debug('Ceci est un message de debug !'));
+console.log(important('Ceci est un message important !'));
+
 /**
     4.
     Prenez l'habitude d'utiliser :
@@ -61,7 +71,7 @@
       - ou colors documenté ici : https://www.npmjs.com/package/colors
     pour améliorer la lisibilité de la console.
 **/
-
+//OK
 /**
  * Sami Radi - VirtuoWorks® - tous droits réservés©
 **/

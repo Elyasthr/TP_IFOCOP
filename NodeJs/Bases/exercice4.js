@@ -85,14 +85,22 @@
     votre ordinateur. Vérifiez qu'elle correspond bien à la liste obtenues à
     l'aide de la commande système proposée plus haut.
 **/
+    const dns = require('dns');
 
+    console.log(dns.getServers());
 /**
     2.
     Utilisez la méthode .lookup() du module DNS de Node JS pour afficher dans
     votre console l'adresse IPv4 correspondant au nom de domaine www.fnac.com et
     vérifiez qu'elle correspond bien à celle que je vous donne plus haut.
 **/
+    dns.lookup('www.fnac.com',(e,adresses) => {
+      if(e) throw e;
+      else
+        console.log('c\'est cool');
+        console.log(adresses);
 
+    })
 /**
     3.
     - Demandez à votre voisin son adresse IPv4.
@@ -103,7 +111,7 @@
     ATTENTION : pour modifier le fichier hosts vous devez démarrer un éditeur de
     texte en tant que administrateur du système d'exploitation.
 **/
-
+    //A VOIR DEMAIN EN COURS
 /**
     4.
     Votre programme prend un nom en argument lors de son exécution. Votre
@@ -114,6 +122,15 @@
     - Vous devez modulariser ce programme (votre fonction doit être dans un
       module secondaire).
 **/
+      // ==> fonction a faire selon ce que retourn la methode que je doit utilisé
+      var uneadr = function(nom){
+        if(nom == 'a une adresse IPV4'){
+          console.log('correspond');
+        }
+        else{
+          console.log('ne correspond pas');
+        }
+      }
 
 /**
  * Sami Radi - VirtuoWorks® - tous droits réservés©
